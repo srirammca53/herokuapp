@@ -1,0 +1,17 @@
+<%= form_tag %>
+  <div class="field">
+    <font color="white"><%= label_tag :fullname %></font><br />
+    <%= text_field_tag :fullname %>
+  </div>
+  <div class="field">
+    <font color="white"><%= label_tag :mail %></font><br />
+    <%= text_field_tag :mail %>
+  </div>
+  <div class="field">
+    <font color="white"><%= label_tag :inquiry %></font><br />
+    <%= text_area_tag :inquiry %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "submit"%>
+  </div>
+

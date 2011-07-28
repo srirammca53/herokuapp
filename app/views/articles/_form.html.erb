@@ -1,0 +1,21 @@
+<%= form_for([@user, @user.articles.build],:html => { :multipart => true }) do |f| %>
+  <div class="field">
+    <font color="white"><%= f.label :title %></font><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <font color="white"><%= f.label :description %></font><br />
+    <%= f.ckeditor_textarea( 'article', 'description',:toolbarSet => 'Simple', :width => '100%', :height => '200px') %> 
+  </div>
+  <div>
+   <%= f.file_field :avatar %>
+ 
+  </div>
+  <div>
+   <%= f.file_field :file %>
+ 
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

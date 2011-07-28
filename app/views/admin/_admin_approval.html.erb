@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<%= form_for([@article, @article.comments.build]) do |f| %>
+<center>
+  <table border=0 >
+  <tr bg color =#A0C500>
+    <td> <font color="white"><%= f.label :commenter %></font></td>
+    <td><%= f.text_field :commenter %></td>
+  </tr>
+  <tr bg color =#A0C500>
+    <td> <font color="white"><%= f.label :comment %></font></td>
+    <td><%= f.text_area :comment %></td>
+  </tr>
+  <table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  </center>
+<% end %>
+
+
+
+
+</body>
+</html>
+
