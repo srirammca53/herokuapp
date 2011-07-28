@@ -3,11 +3,15 @@ class Admin < ActionMailer::Base
   
 
 
-def admin_approval(author)
-@author=author
+def admin_approval(comment)
+@comment=comment
+
+@article=@comment.article
+@user=@article.user
+@user.email
 
 @url = ""
-mail(:to => @author.email,
+mail(:to => @user.email,
 :subject => "comments for Approval")
 
 
